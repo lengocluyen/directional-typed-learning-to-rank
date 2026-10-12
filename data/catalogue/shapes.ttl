@@ -1,0 +1,26 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ov: <https://w3id.org/rgsmw/open-vehicle/> .
+
+ov:VehicleShape a sh:NodeShape ;
+  sh:targetClass ov:Vehicle ;
+  sh:property [ sh:path ov:priceEur ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:massKg ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:energyCarrier ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path ov:powertrain ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "ICE" "HEV" "PHEV" "BEV" ) ] ;
+  sh:property [ sh:path ov:segment ; sh:maxCount 1 ;
+                sh:in ( "ECONOMIQUE" "INFERIEURE" "MOYENNE INFERIEURE" "MOYENNE SUPERIEURE" "SUPERIEURE" "LUXE" ) ] ;
+  sh:property [ sh:path ov:bodyType ; sh:maxCount 1 ; sh:nodeKind sh:Literal ] ;
+  sh:property [ sh:path ov:brand ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:Literal ] ;
+  sh:property [ sh:path ov:gearbox ; sh:maxCount 1 ; sh:nodeKind sh:Literal ] ;
+  sh:property [ sh:path ov:engineDisplacementCc ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:maxPowerKw ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:co2GramPerKm ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path ov:fuelConsumptionL100km ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path ov:electricRangeKm ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:fiscalPowerCv ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+  sh:property [ sh:path ov:missingValue ; sh:node ov:MissingValueShape ] .
+
+ov:MissingValueShape a sh:NodeShape ;
+  sh:property [ sh:path ov:onProperty ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path ov:reason ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "not_applicable" "not_reported" ) ] .

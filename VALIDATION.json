@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-12",
+  "status": "passed",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "fresh_environment": true,
+  "separate_test_checkout": true,
+  "commands": {
+    "installation": "uv sync --frozen --extra dev",
+    "tests": "python -I -m pytest -q",
+    "demo": "python -I scripts/demo.py",
+    "archive_verification": "python -I scripts/acquire_data.py --dataset all",
+    "bundled_smoke": "python -I -u scripts/run_experiment.py run --config configs/smoke.yaml --suite audit --suite generated --output runs/generated-smoke --workers 2",
+    "all_suite_smoke": "python -I -u scripts/run_experiment.py run --config configs/smoke.yaml --output runs/all-smoke --workers 2",
+    "resume": "same all-suite smoke command with --resume",
+    "full_plan": "python -I scripts/run_experiment.py plan --config configs/full.yaml --output runs/full-plan",
+    "summarize": "python -I scripts/run_experiment.py summarize --output runs/all-smoke",
+    "export": "python -I scripts/run_experiment.py export --output runs/all-smoke"
+  },
+  "checks": {
+    "regression_tests": {
+      "passed": 65,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 16.29
+    },
+    "artificial_demo": {
+      "status": "pass",
+      "pairwise_reconstruction_error": 0.0
+    },
+    "archival_cache_verification": {
+      "ANU_archives": 2,
+      "McFadden_archives": 1,
+      "online_download_tested": false
+    },
+    "all_suite_smoke": {
+      "status": "complete",
+      "completed_tasks": 7,
+      "expected_tasks": 7,
+      "metric_rows": 74,
+      "contrast_rows": 192,
+      "prediction_rows": 6029,
+      "plots": 0
+    },
+    "bundled_data_only_smoke": {
+      "status": "complete",
+      "completed_tasks": 3,
+      "expected_tasks": 3,
+      "metric_rows": 16,
+      "contrast_rows": 42,
+      "prediction_rows": 960,
+      "input_files": [
+        "records",
+        "rdf"
+      ],
+      "plots": 0
+    },
+    "resume": {
+      "pending_tasks": 0,
+      "status": "pass"
+    },
+    "numerical_summary": "pass",
+    "numerical_export": "pass",
+    "full_profile": {
+      "planned_tasks": 101,
+      "rerun": false
+    },
+    "scientific_configurations_byte_identical_to_prior_package": 4,
+    "catalogue_and_frozen_reference_values_preserved": true,
+    "public_markdown_links_resolve": true,
+    "original_research_checkout_and_manuscript_preserved": true
+  },
+  "scope": "Standalone interface and execution validation. The full study is retained as a frozen numerical reference, not newly refitted. No independent empirical confirmation is claimed.",
+  "readme_paper_pipeline_revision": {
+    "date": "2026-10-12",
+    "scope": "Documentation and display asset only; implementation and configurations unchanged",
+    "paper_figure_source": "paper/figures/directional_rdf_pipeline.svg",
+    "public_figure": "docs/assets/dtltr-pipeline.svg",
+    "figure_sha256": "6e0ec7f76f3a44c80170589259cb5934d5ed1d7937c1b70104a53f91a2d59e84",
+    "figure_byte_identical": true,
+    "pipeline_document_removed": true,
+    "checks": "Image correspondence, documentation links, release inventory and archive checks; prior execution validation retained."
+  }
+}

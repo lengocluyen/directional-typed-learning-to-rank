@@ -1,0 +1,39 @@
+{
+  "title": "ADEME Car Labelling: pinned snapshot and derived typed RDF catalogue",
+  "creator": "ADEME (source data); DT-LTR authors (transformation)",
+  "source": "https://www.data.gouv.fr/datasets/ademe-car-labelling",
+  "licence": "Licence Ouverte / Open Licence 2.0",
+  "licence_text": "LICENSE-LO-2.0.md",
+  "licence_source": "https://github.com/etalab/licence-ouverte/blob/master/LO.md",
+  "source_last_update_as_verified_2026_10_12": "2026-09-21",
+  "catalogue_build_date": "2026-09-29",
+  "source_rows": 3604,
+  "exact_duplicates_removed": 1295,
+  "entities": 2309,
+  "properties": 14,
+  "rdf_triples": 45280,
+  "transform": "src/dtltr_vehicle/open_catalogue.py",
+  "label_origin": "No human preferences supplied with this catalogue. Experiment labels are generated from the declared mechanisms.",
+  "files": {
+    "raw/ademe_car_labelling.csv": {
+      "bytes": 1133403,
+      "sha256": "3e1c25363bebcd910327f617a392fb1bceb9f7a027317a03114d93de70136a0b"
+    },
+    "records.json": {
+      "bytes": 1305512,
+      "sha256": "31e3ccf76af9b79676820e6be99636d050a587263fbfa23f550a0c74065bf45c"
+    },
+    "vehicles.ttl": {
+      "bytes": 1774563,
+      "sha256": "749fb5adb73f461f47aad1e8f63e9722e66edd61b83ad52e8f3506416490de08"
+    },
+    "shapes.ttl": {
+      "bytes": 2069,
+      "sha256": "e183b21f70ebea660f90669b1eed6d39f2a7e30a766abe22a6183d567d542f00"
+    },
+    "catalogue_summary.json": {
+      "bytes": 1282,
+      "sha256": "6b52d48a46d1b7a53e6dcb7fa113310e32cb06528171f9b5c977019fe7ba2009"
+    }
+  }
+}

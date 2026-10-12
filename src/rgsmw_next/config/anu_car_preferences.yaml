@@ -1,0 +1,63 @@
+schema_version: rgsmw-anu-car-preferences-1
+
+source:
+  title: "ANU Car Preference Dataset"
+  landing_page: "https://users.cecs.anu.edu.au/~u4940058/CarPreferences.html"
+  publisher_context: "Australian National University CECS personal research page"
+  paper_url: "https://users.cecs.anu.edu.au/~ssanner/Papers/mogp.pdf"
+  verified_on: "2026-08-26"
+  citation:
+    authors: "E. Abbasnejad, S. Sanner, E. V. Bonilla, and P. Poupart"
+    title: "Learning Community-based Preferences via Dirichlet Process Mixtures of Gaussian Processes"
+    venue: "Proceedings of the 23rd International Joint Conference on Artificial Intelligence (IJCAI)"
+    year: 2013
+  licence:
+    spdx: "NOASSERTION"
+    research_use_notice: "The official landing page permits research use and requests acknowledgement through the supplied citation."
+    redistribution_status: "not_explicitly_stated"
+    caution: "No separate standard licence file was observed in either official archive; verify redistribution terms before republishing the archives."
+
+archives:
+  exp1:
+    url: "https://users.cecs.anu.edu.au/~u4940058/data/exp1-prefs.zip"
+    filename: "exp1-prefs.zip"
+    sha256: "e3ab308d4cfbf01d64e4b8c80aaf15ae2b724c95554b80a6f1545b2d20440082"
+  exp2:
+    url: "https://users.cecs.anu.edu.au/~u4940058/data/exp2-prefs.zip"
+    filename: "exp2-prefs.zip"
+    sha256: "ccbef141b41eb41550dc4ff98163386111db6c31682bfe81535d01d3e30979d8"
+
+experiments:
+  exp1:
+    archive: exp1
+    users: "users1.csv"
+    items: "items1.csv"
+    preferences: "prefs1.csv"
+    has_layout: false
+    file_sha256:
+      users1.csv: "f1d37859d0979a539fea1669d6f467ab42b51fa69b857c581b05be6b7d5869f0"
+      items1.csv: "36d82ef97ca8c52bf51c5fe8b3b5c0f3848ebc39f9bc162d0768c3a426db2a66"
+      prefs1.csv: "084c79bed795f25456fd41d34f7ea0b74ad2e3c848460a655b50b863cead3fd1"
+  exp2:
+    archive: exp2
+    users: "users2.csv"
+    items: "items2.csv"
+    preferences: "prefs2.csv"
+    has_layout: true
+    file_sha256:
+      users2.csv: "9362dcf6e3de657ea828a546fb0c334d11f50536d9decc262ef77759d28ac1fb"
+      items2.csv: "94e980de9855493e1980cd4356fd77070d7fb3555e98cb26ef7d97a4fb39b87e"
+      prefs2.csv: "602ebb67591b1d53ab6f37e8bced39a71e5beb89a8d9259138ac13bb58573094"
+
+codebooks:
+  user:
+    education: {"0": "no_response", "1": "high_school", "2": "bachelors", "3": "phd"}
+    age: {"0": "no_response", "1": "below_25", "2": "25_to_30", "3": "30_to_35", "4": "above_40"}
+    gender: {"0": "no_response", "1": "male", "2": "female"}
+    region: {"0": "no_response", "1": "south", "2": "west", "3": "north_east", "4": "mid_west"}
+  item:
+    body_type_exp1: {"1": "sedan", "2": "suv"}
+    body_type_exp2: {"1": "sedan", "2": "suv", "3": "hatchback"}
+    transmission: {"1": "manual", "2": "automatic"}
+    fuel_consumed: {"1": "hybrid", "2": "non_hybrid"}
+    engine_transmission_layout: {"1": "awd", "2": "fwd"}

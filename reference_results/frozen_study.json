@@ -1,0 +1,256 @@
+{
+  "source_run": "full-solverfix-v1",
+  "status": "complete",
+  "tasks": 101,
+  "fingerprint": "ce384b543fc8df0aabd776d5833915611a0dc79fb134aa24f54ccc8a2f8aeedf",
+  "environment": {
+    "packages": {
+      "catboost": "1.2.10",
+      "clarabel": "0.11.1",
+      "cvxpy": "1.9.2",
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "pyshacl": "0.40.1",
+      "rdflib": "7.6.0",
+      "scipy": "1.18.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13"
+  },
+  "interpretation": "Development reanalysis and generated mechanisms; never independent confirmatory evidence merely because splits are held out.",
+  "configuration": {
+    "anu_experiments": [
+      "exp1",
+      "exp2"
+    ],
+    "anu_models": [
+      "TD",
+      "ST",
+      "DT",
+      "direct",
+      "direct_ref",
+      "spline",
+      "spline_ref"
+    ],
+    "anu_references": [
+      "catalogue"
+    ],
+    "bootstrap_draws": 10000,
+    "budgets": [
+      0,
+      2,
+      5,
+      10,
+      20
+    ],
+    "catboost": {
+      "depth": 4,
+      "l2_leaf_reg_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "thread_count": 1
+    },
+    "catboost_iteration_grid": [
+      100,
+      200,
+      400
+    ],
+    "catboost_iterations": 200,
+    "clipping": [
+      "clipped",
+      "unclipped"
+    ],
+    "cohort_seed": 20261010,
+    "completion": [
+      "raw",
+      "default"
+    ],
+    "entity_split": [
+      0.6,
+      0.15,
+      0.1,
+      0.15
+    ],
+    "folds": 5,
+    "knot_grid": [
+      3,
+      5,
+      7
+    ],
+    "knots": 5,
+    "limits": {
+      "mcfadden_sets": null,
+      "users": null
+    },
+    "mcfadden_references": [
+      "catalogue",
+      "design_proxy"
+    ],
+    "models": [
+      "TD",
+      "ST",
+      "DT",
+      "direct",
+      "direct_ref",
+      "spline",
+      "spline_ref",
+      "catboost_ref"
+    ],
+    "noise_fraction": 0.25,
+    "paths": {
+      "anu": "artifacts/archival_vehicle_preferences/anu",
+      "mcfadden": "artifacts/archival_vehicle_preferences/mcfadden",
+      "rdf": "runs/dtltr_vehicle_v2/catalogue/vehicles.ttl",
+      "records": "runs/dtltr_vehicle_v2/catalogue/records.json"
+    },
+    "penalties": {
+      "gamma": [
+        0.0,
+        0.01
+      ],
+      "lam": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "mu": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ]
+    },
+    "profile": "full-development",
+    "rules": [
+      "additive_similarity",
+      "sparse_similarity",
+      "signed_linear",
+      "gain_loss",
+      "offset_ideal_point",
+      "lexicographic",
+      "informative_missingness",
+      "query_interaction"
+    ],
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "sizes": {
+      "calibration": 1000,
+      "development": 1000,
+      "test": 2000,
+      "train": 3000
+    },
+    "suites": [
+      "audit",
+      "anu",
+      "mcfadden",
+      "generated",
+      "external"
+    ],
+    "support_draws": 3
+  },
+  "original_source_hashes": {
+    "pyproject.toml": "7062d91b55846821c836444db7ccad4afa323a1f508ab7d3becf24c58711c68b",
+    "scripts/run_dtltr_full.py": "306e0ffba8c6437033f1e15d757c4546df67aead02dffe9cbabcf515e9a8136d",
+    "src/dtltr_vehicle/__init__.py": "074ad759978600f82ac4c0f62451c83e97511b7b8fbe27510c4307f0ca6def28",
+    "src/dtltr_vehicle/anu_study.py": "001d47c30c9bcc05c327f458021a4f6ec21d17514facd87b36f737997329c3ce",
+    "src/dtltr_vehicle/basis.py": "d9300c0e6ea408b30c0221caedcc5363e9896c825f8a6ee3f5fb12f30c3d6a0e",
+    "src/dtltr_vehicle/experiments_v3/__init__.py": "64cb73fdfafd7ea9b307f4db0ffbadf27f5f74e161cb5f1d4877d3c54dac3a35",
+    "src/dtltr_vehicle/experiments_v3/data.py": "234d932c0f97e3d236788403377e317eebd0ae6814f41b1ee42ffd8a2614f234",
+    "src/dtltr_vehicle/experiments_v3/features.py": "d94966c734d526324b22e495bf74fada6bdf016c5d5e448b95f64ffcb3bd6b81",
+    "src/dtltr_vehicle/experiments_v3/generated.py": "db7c769f28002111bc7d88e97c7ab7a88648bf95d2daa55ca63bafa3fdf8680c",
+    "src/dtltr_vehicle/experiments_v3/human.py": "638ff5a096059758ac18de8eab9e25b2472499ed72f0e56fd9d6dcbadb0968a5",
+    "src/dtltr_vehicle/experiments_v3/models.py": "904892c5a5d28ed8b77c993ebb489f511ff6ab14c9f8a69712868779c6236c53",
+    "src/dtltr_vehicle/experiments_v3/reporting.py": "ae3fcae44776ac0589710e230301251776de894ea917967b402a2a7cd232fd61",
+    "src/dtltr_vehicle/experiments_v3/runner.py": "130324856c9b842b8cad1c9246e3872a04b33e46d8d909f237b9b8bd773be91d",
+    "src/dtltr_vehicle/generated_study.py": "ca9a0d6f0ff8546075414acc9f56b61005462f6b0918843d291a106f439c7cb0",
+    "src/dtltr_vehicle/learners.py": "3b7f7caa450b1059376d3c281dc228a018e99bc1c21702c8237e77ef76cd658a",
+    "src/dtltr_vehicle/mcfadden_study.py": "0dcd9209ee73673889d57ab36a9a5741a2ff205c0b72d2b09de05667f13b5b42",
+    "src/dtltr_vehicle/open_catalogue.py": "11cb01507eac95fcdf2031ee459831309ead3c407ebb0c270c8cdcb99b9fb1f0",
+    "src/dtltr_vehicle/provenance.py": "42fc70b581bf379d71f454cebda8c5f26a1a57b7115d4e48ae6a5f74566cf9af",
+    "src/dtltr_vehicle/report.py": "c7737355edbd1940620caf7589692820db13db8c6593fc76aae45776a1d2e728",
+    "src/rgsmw_next/__init__.py": "91d7ec2ba92ca1d908a3ff9eb069b73136a7dd31b63809c92dbe275bdf572e7c",
+    "src/rgsmw_next/anu_car_preferences.py": "242773e3d3f08341f777acf799d3322d3290cb630b1360c6f19bc80ffb450258",
+    "src/rgsmw_next/anu_experiment.py": "de1bda2a3319de6b129148fc5a7f5b0f90e5f2405a313372602e13751c4a6cea",
+    "src/rgsmw_next/anu_robustness_extension.py": "61a803e6260249a4ea0a7324a9fd6cb54589ebf813ce3ae6f0d3f373a4a6e1cb",
+    "src/rgsmw_next/anu_typed_extension.py": "67a35948f5afb9446a93dfe45324d94b4bdc0721932c5b3dd3c51a8f073ba2bb",
+    "src/rgsmw_next/archival_evaluation.py": "5870329813e5f2a553ceeece2e2c7d860e7f529c4e9d062855810f54f4c4a9d5",
+    "src/rgsmw_next/archival_reporting.py": "a7ca5b3d186eb359268e0436382d2508612554e0c43e25ecf935b86d3db807de",
+    "src/rgsmw_next/archival_reproduction.py": "d6a0f4ec130c534f24ba0b5c6bd3f1e4e7d334f52603634f8a4ee247e43d502d",
+    "src/rgsmw_next/archival_secondary_analysis.py": "5941c6672a31860262033890b940e69e70074dc2a232783b4acae9fb4ce43796",
+    "src/rgsmw_next/catboost_pairlogit.py": "22f2b0f7b4a0b6af9be7f9122a495d52e027a8907b158058d1bddffce2cdebfa",
+    "src/rgsmw_next/choice_baselines.py": "028ae562b32aa10f16ae03e5c5a41650049a79376b0aa44f53ab6a41bbd17fe0",
+    "src/rgsmw_next/cli.py": "1a970fbb9dc372e4db724c9b6a358bcf28021c02204133e827351107f03ef600",
+    "src/rgsmw_next/config/anu_car_preferences.yaml": "938222161c9c6c49f81b0c41615179ff11f625c4460fe6f1d6e72ca1d90d2bd5",
+    "src/rgsmw_next/config/predicate_schema.yaml": "edfd92d36b0a623778675cce0ad405e591bb711416b3f9f77fec50bae7de860e",
+    "src/rgsmw_next/config/public_benchmarks.yaml": "913887676bebe3d384693c4aac2341c93d8d1759413ee47f9a09e994a7e1ba12",
+    "src/rgsmw_next/config/vehicle_baselines.yaml": "e61faa67ba91cbe6f316307bc422c465f304143880bd92506c00f867ab85804b",
+    "src/rgsmw_next/config/vehicle_shapes.ttl": "f5b504deec935ffef28e667091ad53e62fa2095e86fa1482928cc6506b7f4946",
+    "src/rgsmw_next/directional_typed_rank.py": "f4f7a0ee3030a54b100fe8a2981a727b3658479e2f64a982143494a20b2fd287",
+    "src/rgsmw_next/distance.py": "ad13383d66732fed47d7b7d7ffd78a4ca07e3780b2fa57b186629084bcd4ed89",
+    "src/rgsmw_next/evaluation.py": "04fb52de28b459b4ecbbb15a138145b7478eb10c73ff01346958122dbf921b10",
+    "src/rgsmw_next/export.py": "b74a63ae24567bb3a6a79f276fe27eb52717aa7235929c300a26efe422e7d84e",
+    "src/rgsmw_next/human.py": "912be7c77efca8f078a4ece962b262839e26ba41c430542c1fdc0fb0eac78c9b",
+    "src/rgsmw_next/kernel_preference.py": "29a3cc40c3f3ad378f6ede11e4dd656cce3f569d2a48c3be9c1caf386c2abd85",
+    "src/rgsmw_next/learning.py": "f847d22aa2bc4ee2ed2c261378bd23c1d1f55822c9b16f18d646a77b7e33d94e",
+    "src/rgsmw_next/legacy.py": "6c25d8229b8c681de84ed7ec0ff13b30824fcc646be467699a1210f8fbe844ca",
+    "src/rgsmw_next/legacy_nl_baseline.py": "f87a57c2d8adf5e5140372ecd3fc4646a12aa5d5361b52300a4bbc63cfa3860c",
+    "src/rgsmw_next/li2021_baseline.py": "00be1bc7f9487cdb325cb67350b6108a868e9339b8a242bea078dcc518f18744",
+    "src/rgsmw_next/mcfadden_experiment.py": "e83fd952afe6090982562f7e41fe655f8d470383c1047de5c3601647a264ea11",
+    "src/rgsmw_next/mcfadden_train.py": "a7570a4a066fbf90f0f4b178aaba54ec1f3c3ccc1953499c844d65e53a6e0b1b",
+    "src/rgsmw_next/oracle_stress.py": "2934add0a7f0ce97837f446ba14bd25c10bc2f3c5d66c009e0990ab87cadf9d0",
+    "src/rgsmw_next/paper1_extension_reproduction.py": "0ec885844e1d10892e00e38d7a7cdb62040eed3806252d67503741917ade4d6b",
+    "src/rgsmw_next/paper1_modern_reproduction.py": "011efb9c7ac1d93f309574f55b212e1af31be3d3baa635e598e6b2729ee0daf7",
+    "src/rgsmw_next/preference_learning.py": "9299aeb70f4d064f7808b4fa81f52b6d72794a2ed896f2fd1cfa47ba8fd85b99",
+    "src/rgsmw_next/public_data.py": "79b969e1a96e0d2129164390373e85c54002c5b98dda7e487c55208c43fc0ed2",
+    "src/rgsmw_next/public_experiment.py": "541b7bd97c7d310b406dc0d7419ab7f589c850f05e955edfcbd45df94797ee58",
+    "src/rgsmw_next/public_robustness.py": "97b79fd638d3f8de65992bdd589b042a033396312a2e642bb9587d810036dd2a",
+    "src/rgsmw_next/rdf2vec_pairlogit.py": "94e041a398e06325d2246af5134592c86c6d6650bcfedad1bb229558e27595a8",
+    "src/rgsmw_next/reporting.py": "a54d61f2ea18c3b28fa1f5d63e40c2ed494096a8c8e09f5f914610e277c37c7f",
+    "src/rgsmw_next/reproduction.py": "fb880c4187dbf743552879925c08d1f30cb14db61b2e3519470a5a84b017d0d1",
+    "src/rgsmw_next/retrieval.py": "f7fccd8e0ccbbbb522b5ccff03edb095e3a011ed3448023164ffbd3300f19bf6",
+    "src/rgsmw_next/schema.py": "cd3fe4f7bb1e832f63e287d754b498dccfe78ee5211ce8f0dc711b0397e6eeeb",
+    "src/rgsmw_next/simulation.py": "fba79170a7eecea7503e8fc1d8df7d52f8e3a4a4fdb1a8e720557bc065754d44",
+    "src/rgsmw_next/types.py": "40849ca6ca9e5dc585a489b6d4e4cb557418497805b8acc5a3bb8d7b4915b6db",
+    "src/rgsmw_next/validation.py": "03119b44a628e0e50cdd8f437b5fc35029760e048bbdb45651f95fa4de5f7c0e",
+    "src/rgsmw_next/vehicle_baselines.py": "0b28b08eb5e2fb21006aac6099efe57e246ed75e11c79137e998b5a87394e0cd",
+    "src/rgsmw_next/vehicle_stress_experiment.py": "fc2f4998ba9e4ad18b6fc4476a382d69cd1a15e9d61c97510cb2626b431db84f",
+    "study/DTLTR_FULL_V3_PROTOCOL.md": "14bab118512df6edc9d4dcd3a76d890a9ac2aa40d9c1b199075f34b04364dffa",
+    "uv.lock": "f45cebffb60df0d43a213cea1333c25be28a2b39ec2bebfaa0be4cc17f0a8ff4"
+  },
+  "input_hashes": {
+    "anu": {
+      "archives/exp1-prefs.zip": "e3ab308d4cfbf01d64e4b8c80aaf15ae2b724c95554b80a6f1545b2d20440082",
+      "archives/exp2-prefs.zip": "ccbef141b41eb41550dc4ff98163386111db6c31682bfe81535d01d3e30979d8",
+      "extracted/exp1/.archive_sha256": "cf9e02cf6c450957d6aa152a02a222a9aa11c744102e7f8fbbcc8339b5364b15",
+      "extracted/exp1/items1.csv": "36d82ef97ca8c52bf51c5fe8b3b5c0f3848ebc39f9bc162d0768c3a426db2a66",
+      "extracted/exp1/prefs1.csv": "084c79bed795f25456fd41d34f7ea0b74ad2e3c848460a655b50b863cead3fd1",
+      "extracted/exp1/users1.csv": "f1d37859d0979a539fea1669d6f467ab42b51fa69b857c581b05be6b7d5869f0",
+      "extracted/exp2/.archive_sha256": "b9ce7870dc611680fa0d9a19368e50a06fd38314027ed52b2bb2316e640b8db3",
+      "extracted/exp2/items2.csv": "94e980de9855493e1980cd4356fd77070d7fb3555e98cb26ef7d97a4fb39b87e",
+      "extracted/exp2/prefs2.csv": "602ebb67591b1d53ab6f37e8bced39a71e5beb89a8d9259138ac13bb58573094",
+      "extracted/exp2/users2.csv": "9362dcf6e3de657ea828a546fb0c334d11f50536d9decc262ef77759d28ac1fb"
+    },
+    "mcfadden": {
+      "archives/car.csv.gz": "cbdab01357dab84e19f70c2761a6b6421f73bde530987007a4dbdfb642f0a554"
+    },
+    "rdf": {
+      "vehicles.ttl": "749fb5adb73f461f47aad1e8f63e9722e66edd61b83ad52e8f3506416490de08"
+    },
+    "records": {
+      "records.json": "31e3ccf76af9b79676820e6be99636d050a587263fbfa23f550a0c74065bf45c"
+    }
+  },
+  "notice": "Reference results from the original complete run. The trimmed public release has its own source and runtime fingerprints and cannot resume the original run. No participant-level predictions or fitted participant coefficients are included."
+}

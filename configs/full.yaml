@@ -1,0 +1,36 @@
+profile: full-development
+suites: [audit, anu, mcfadden, generated, external]
+seeds: [11, 22, 33, 44, 55]
+models: [TD, ST, DT, direct, direct_ref, spline, spline_ref, catboost_ref]
+# CatBoost is excluded explicitly from the anchored ANU adaptation experiment:
+# its tree warm start is not an equivalent quadratic population anchor.
+anu_models: [TD, ST, DT, direct, direct_ref, spline, spline_ref]
+completion: [raw, default]
+clipping: [clipped, unclipped]
+paths:
+  anu: data/archival/anu
+  mcfadden: data/archival/mcfadden
+  records: data/catalogue/records.json
+  rdf: data/catalogue/vehicles.ttl
+folds: 5
+anu_experiments: [exp1, exp2]
+anu_references: [catalogue]
+mcfadden_references: [catalogue, design_proxy]
+budgets: [0, 2, 5, 10, 20]
+support_draws: 3
+cohort_seed: 20261010
+limits: {users: null, mcfadden_sets: null}
+penalties:
+  lam: [0.0001, 0.001, 0.01, 0.1, 1.0]
+  gamma: [0.0, 0.01]
+  mu: [0.01, 0.1, 1.0, 10.0, 100.0]
+knots: 5
+knot_grid: [3, 5, 7]
+catboost_iterations: 200
+catboost_iteration_grid: [100, 200, 400]
+catboost: {depth: 4, thread_count: 1, l2_leaf_reg_grid: [0.01, 0.1, 1.0, 10.0]}
+rules: [additive_similarity, sparse_similarity, signed_linear, gain_loss, offset_ideal_point, lexicographic, informative_missingness, query_interaction]
+sizes: {train: 3000, development: 1000, calibration: 1000, test: 2000}
+entity_split: [0.60, 0.15, 0.10, 0.15]
+noise_fraction: 0.25
+bootstrap_draws: 10000

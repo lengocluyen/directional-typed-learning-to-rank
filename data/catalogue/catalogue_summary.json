@@ -1,0 +1,51 @@
+{
+ "source_rows": 3604,
+ "exact_duplicates_removed": 1295,
+ "distinct_vehicles": 2309,
+ "triples": 45280,
+ "shacl_conforms": true,
+ "shacl_report_head": "Validation Report\nConforms: True\n",
+ "completeness": {
+  "violations": 0,
+  "coverage": {
+   "price_eur": 1.0,
+   "energy_carrier": 1.0,
+   "powertrain": 1.0,
+   "body_type": 1.0,
+   "segment": 1.0,
+   "brand": 1.0,
+   "gearbox": 1.0,
+   "engine_displacement_cc": 0.9471632741446514,
+   "max_power_kw": 0.9471632741446514,
+   "mass_kg": 1.0,
+   "co2_g_km": 0.9471632741446514,
+   "fuel_consumption_l100km": 0.9471632741446514,
+   "electric_range_km": 0.08055435253356431,
+   "fiscal_power_cv": 1.0
+  },
+  "missing_reasons": {
+   "engine_displacement_cc": {
+    "not_applicable": 122,
+    "not_reported": 0
+   },
+   "max_power_kw": {
+    "not_applicable": 0,
+    "not_reported": 122
+   },
+   "co2_g_km": {
+    "not_applicable": 0,
+    "not_reported": 122
+   },
+   "fuel_consumption_l100km": {
+    "not_applicable": 122,
+    "not_reported": 0
+   },
+   "electric_range_km": {
+    "not_applicable": 2123,
+    "not_reported": 0
+   }
+  }
+ },
+ "licence": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+ "source": "https://www.data.gouv.fr/datasets/ademe-car-labelling"
+}
