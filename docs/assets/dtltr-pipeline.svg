@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1517.4512"
+   height="733.37683"
+   viewBox="0 0 1517.4512 733.37683"
+   version="1.1"
+   id="svg94"
+   sodipodi:docname="directional_rdf_pipeline.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="directional_rdf_pipeline.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview94"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.29114039"
+     inkscape:cx="2007.6225"
+     inkscape:cy="352.06382"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg94" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .title{font-family:'Times New Roman',Times,serif;font-size:28px;font-weight:700}
+      .boxTitle{font-family:'Times New Roman',Times,serif;font-size:22px;font-weight:700}
+      .boxText{font-family:'Times New Roman',Times,serif;font-size:20px}
+      .small{font-family:'Times New Roman',Times,serif;font-size:18px}
+      .tiny{font-family:'Times New Roman',Times,serif;font-size:16px}
+      .italic{font-family:'Times New Roman',Times,serif;font-size:18px;font-style:italic}
+      .math{font-family:'Times New Roman',Times,serif;font-size:22px;font-style:italic}
+      .step{font-family:'Times New Roman',Times,serif;font-size:20px;font-weight:700}
+      .section{font-family:'Times New Roman',Times,serif;font-size:27px;font-weight:700}
+      .inputBox{fill:#fafafa;stroke:#4a4a4a;stroke-width:2}
+      .featBox{fill:#f6f9ff;stroke:#2f5aa8;stroke-width:2.2}
+      .learnBox{fill:#fff8f2;stroke:#c96b22;stroke-width:2.2}
+      .outBox{fill:#f7fbf4;stroke:#4e7c39;stroke-width:2.2}
+      .arrow{stroke:#313131;stroke-width:2.6;fill:none;marker-end:url(#arrow)}
+      .thin{stroke:#555;stroke-width:1.6;fill:none}
+      .dash{stroke:#555;stroke-width:1.6;fill:none;stroke-dasharray:7 6}
+      .divider{stroke:#b6b6b6;stroke-width:1.2}
+    </style>
+    <marker
+       id="arrow"
+       markerWidth="10"
+       markerHeight="8"
+       refX="9"
+       refY="4"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M 0,0 10,4 0,8 Z"
+         fill="#313131"
+         id="path1" />
+    </marker>
+  </defs>
+  <!-- Section headings -->
+  <text
+     x="122.15766"
+     y="18.298828"
+     text-anchor="middle"
+     class="section"
+     fill="#333333"
+     id="text1">Input</text>
+  <text
+     x="622.15765"
+     y="18.298828"
+     text-anchor="middle"
+     class="section"
+     fill="#2f5aa8"
+     id="text2">Feature construction</text>
+  <text
+     x="1051.9641"
+     y="18.65451"
+     text-anchor="middle"
+     class="section"
+     fill="#c96b22"
+     id="text3">Learning</text>
+  <text
+     x="1399.1577"
+     y="18.298828"
+     text-anchor="middle"
+     class="section"
+     fill="#4e7c39"
+     id="text4">Outputs</text>
+  <!-- Section rules -->
+  <path
+     d="m 9.1576644,54.298828 q 0,-14 13.9999996,-14 H 227.15766 q 14,0 14,14"
+     class="thin"
+     id="path4" />
+  <path
+     d="m 297.11129,54.326182 q 0,-14.051576 12.80618,-14.051576 h 572.61916 q 12.80618,0 12.80618,14.051576"
+     stroke="#2f5aa8"
+     stroke-width="1.6289"
+     fill="none"
+     id="path5" />
+  <path
+     d="m 939.79565,55.473084 q 0,-13.92429 15.85843,-13.92429 h 186.90302 q 15.8584,0 15.8584,13.92429"
+     stroke="#c96b22"
+     stroke-width="1.80442"
+     fill="none"
+     id="path6" />
+  <path
+     d="m 1258.9484,54.338824 q 0,-14.075482 12.2717,-14.075482 h 233.1615 q 12.2716,0 12.2716,14.075482"
+     stroke="#4e7c39"
+     stroke-width="1.59589"
+     fill="none"
+     id="path7" />
+  <!-- Box 1 -->
+  <rect
+     x="2.1576643"
+     y="86.298828"
+     rx="14"
+     ry="14"
+     width="255"
+     height="282"
+     class="inputBox"
+     id="rect7" />
+  <circle
+     cx="30.157665"
+     cy="122.29883"
+     r="19"
+     fill="#ffffff"
+     stroke="#4a4a4a"
+     stroke-width="1.7"
+     id="circle7" />
+  <text
+     x="30.157665"
+     y="129.29883"
+     text-anchor="middle"
+     class="step"
+     id="text7">1</text>
+  <text
+     x="138.16852"
+     y="129.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text8">RDF entities and</text>
+  <text
+     x="132.15767"
+     y="158.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text9">reference profile q</text>
+  <!-- RDF graph icon -->
+  <line
+     x1="75.766273"
+     y1="258.45639"
+     x2="113.76627"
+     y2="222.45639"
+     class="thin"
+     id="line9" />
+  <line
+     x1="75.766273"
+     y1="258.45639"
+     x2="115.76627"
+     y2="295.45639"
+     class="thin"
+     id="line10" />
+  <line
+     x1="75.766273"
+     y1="258.45639"
+     x2="40.766277"
+     y2="224.45639"
+     class="thin"
+     id="line11" />
+  <line
+     x1="75.766273"
+     y1="258.45639"
+     x2="38.766277"
+     y2="295.45639"
+     class="thin"
+     id="line12" />
+  <circle
+     cx="75.766273"
+     cy="258.45639"
+     r="10"
+     fill="#555555"
+     stroke="#222222"
+     id="circle12" />
+  <circle
+     cx="113.76627"
+     cy="222.45639"
+     r="9"
+     fill="#ffffff"
+     stroke="#222222"
+     stroke-width="1.6"
+     id="circle13" />
+  <circle
+     cx="115.76627"
+     cy="295.45639"
+     r="9"
+     fill="#ffffff"
+     stroke="#222222"
+     stroke-width="1.6"
+     id="circle14" />
+  <circle
+     cx="40.766277"
+     cy="224.45639"
+     r="9"
+     fill="#ffffff"
+     stroke="#222222"
+     stroke-width="1.6"
+     id="circle15" />
+  <circle
+     cx="38.766277"
+     cy="295.45639"
+     r="9"
+     fill="#ffffff"
+     stroke="#222222"
+     stroke-width="1.6"
+     id="circle16" />
+  <!-- profile document -->
+  <path
+     d="m 143.15766,203.29883 h 44 l 20,20 v 84 h -64 z"
+     fill="#ffffff"
+     stroke="#222222"
+     stroke-width="1.7"
+     id="path16" />
+  <path
+     d="m 187.15766,203.29883 v 20 h 20"
+     fill="none"
+     stroke="#222222"
+     stroke-width="1.7"
+     id="path17" />
+  <line
+     x1="154.15767"
+     y1="245.29883"
+     x2="194.15767"
+     y2="245.29883"
+     class="thin"
+     id="line17" />
+  <line
+     x1="154.15767"
+     y1="260.29883"
+     x2="194.15767"
+     y2="260.29883"
+     class="thin"
+     id="line18" />
+  <line
+     x1="154.15767"
+     y1="275.29883"
+     x2="186.15767"
+     y2="275.29883"
+     class="thin"
+     id="line19" />
+  <text
+     x="216.15767"
+     y="264.29883"
+     class="math"
+     id="text19">q</text>
+  <text
+     x="124.07919"
+     y="333.4501"
+     text-anchor="middle"
+     class="italic"
+     id="text20"><tspan
+       sodipodi:role="line"
+       id="tspan98"
+       x="124.07919"
+       y="333.4501">Knowledge graph</tspan><tspan
+       sodipodi:role="line"
+       id="tspan99"
+       x="124.07919"
+       y="355.9501">and query profile</tspan></text>
+  <!-- Box 2 -->
+  <rect
+     x="305.15765"
+     y="86.298828"
+     rx="14"
+     ry="14"
+     width="265"
+     height="282"
+     class="featBox"
+     id="rect20" />
+  <circle
+     cx="335.15765"
+     cy="122.29883"
+     r="19"
+     fill="#ffffff"
+     stroke="#2f5aa8"
+     stroke-width="1.7"
+     id="circle20" />
+  <text
+     x="335.15765"
+     y="129.29883"
+     text-anchor="middle"
+     class="step"
+     id="text21">2</text>
+  <text
+     x="439.15765"
+     y="124.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text22">Type-aware</text>
+  <text
+     x="439.15765"
+     y="152.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text23">normalization and</text>
+  <text
+     x="439.15765"
+     y="180.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text24">missingness</text>
+  <!-- type matrix -->
+  <rect
+     x="332.15765"
+     y="233.29883"
+     width="62"
+     height="62"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="rect24" />
+  <line
+     x1="353.15765"
+     y1="233.29883"
+     x2="353.15765"
+     y2="295.29883"
+     class="thin"
+     id="line24" />
+  <line
+     x1="374.15765"
+     y1="233.29883"
+     x2="374.15765"
+     y2="295.29883"
+     class="thin"
+     id="line25" />
+  <line
+     x1="332.15765"
+     y1="254.29883"
+     x2="394.15765"
+     y2="254.29883"
+     class="thin"
+     id="line26" />
+  <line
+     x1="332.15765"
+     y1="275.29883"
+     x2="394.15765"
+     y2="275.29883"
+     class="thin"
+     id="line27" />
+  <!-- sliders -->
+  <path
+     d="m 437.15766,241.29883 h 66 m -66,23 h 66 m -66,23 h 66"
+     class="thin"
+     id="path27" />
+  <circle
+     cx="461.15765"
+     cy="241.29883"
+     r="6"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="circle27" />
+  <circle
+     cx="486.15765"
+     cy="264.29883"
+     r="6"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="circle28" />
+  <circle
+     cx="452.15765"
+     cy="287.29883"
+     r="6"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.6"
+     id="circle29" />
+  <!-- missing -->
+  <rect
+     x="519.15765"
+     y="241.29883"
+     width="32"
+     height="48"
+     rx="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.6"
+     stroke-dasharray="6, 5"
+     id="rect29" />
+  <text
+     x="438.77087"
+     y="332.05264"
+     text-anchor="middle"
+     class="italic"
+     id="text29"><tspan
+       sodipodi:role="line"
+       id="tspan94"
+       x="438.77087"
+       y="332.05264">Normalize by data type;</tspan><tspan
+       sodipodi:role="line"
+       id="tspan95"
+       x="438.77087"
+       y="354.55264">encode missing values</tspan></text>
+  <!-- Box 3 -->
+  <rect
+     x="616.80109"
+     y="93.439362"
+     rx="13.416468"
+     ry="14.002257"
+     width="277.91254"
+     height="282.04547"
+     class="featBox"
+     id="rect30"
+     transform="matrix(0.99996237,-0.00867485,0,1,0,0)" />
+  <circle
+     cx="645.15765"
+     cy="122.29883"
+     r="19"
+     fill="#ffffff"
+     stroke="#2f5aa8"
+     stroke-width="1.7"
+     id="circle30" />
+  <text
+     x="645.15765"
+     y="129.29883"
+     text-anchor="middle"
+     class="step"
+     id="text30">3</text>
+  <text
+     x="769.26544"
+     y="122.47726"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text31">Directional property</text>
+  <text
+     x="769.87262"
+     y="149.87009"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text32">groups hₚ(q,e)</text>
+  <!-- bracketed vector -->
+  <path
+     d="m 654.15766,241.29883 h -9 v 57 h 9"
+     class="thin"
+     id="path32" />
+  <path
+     d="m 862.15766,241.29883 h 9 v 57 h -9"
+     class="thin"
+     id="path33" />
+  <rect
+     x="669.15765"
+     y="256.29883"
+     width="22"
+     height="27"
+     fill="#eef3fb"
+     stroke="#333333"
+     stroke-width="1.5"
+     id="rect33" />
+  <rect
+     x="703.15765"
+     y="256.29883"
+     width="22"
+     height="27"
+     fill="#eef3fb"
+     stroke="#333333"
+     stroke-width="1.5"
+     id="rect34" />
+  <rect
+     x="737.15765"
+     y="256.29883"
+     width="22"
+     height="27"
+     fill="#eef3fb"
+     stroke="#333333"
+     stroke-width="1.5"
+     id="rect35" />
+  <text
+     x="781.15765"
+     y="275.29883"
+     text-anchor="middle"
+     class="boxText"
+     id="text35">⋯</text>
+  <rect
+     x="809.15765"
+     y="256.29883"
+     width="22"
+     height="27"
+     fill="#eef3fb"
+     stroke="#333333"
+     stroke-width="1.5"
+     id="rect36" />
+  <rect
+     x="843.15765"
+     y="256.29883"
+     width="22"
+     height="27"
+     fill="#eef3fb"
+     stroke="#333333"
+     stroke-width="1.5"
+     id="rect37" />
+  <text
+     x="680.15765"
+     y="318.29883"
+     text-anchor="middle"
+     class="small"
+     id="text37">1</text>
+  <text
+     x="714.15765"
+     y="318.29883"
+     text-anchor="middle"
+     class="small"
+     id="text38">2</text>
+  <text
+     x="854.15765"
+     y="318.29883"
+     text-anchor="middle"
+     class="small"
+     id="text39">P</text>
+  <text
+     x="757.44025"
+     y="356.07074"
+     text-anchor="middle"
+     class="italic"
+     id="text40">Per-property directional features</text>
+  <!-- Box 4 -->
+  <rect
+     x="938.72516"
+     y="87.513199"
+     rx="14"
+     ry="14"
+     width="220"
+     height="282"
+     class="learnBox"
+     id="rect40" />
+  <circle
+     cx="969.72516"
+     cy="123.5132"
+     r="19"
+     fill="#ffffff"
+     stroke="#c96b22"
+     stroke-width="1.7"
+     id="circle40" />
+  <text
+     x="969.72516"
+     y="130.5132"
+     text-anchor="middle"
+     class="step"
+     id="text41">4</text>
+  <text
+     x="1048.7252"
+     y="126.5132"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text42">DT score</text>
+  <text
+     x="1048.7252"
+     y="159.5132"
+     text-anchor="middle"
+     class="math"
+     id="text43">U<tspan
+   baseline-shift="sub"
+   font-size="15px"
+   id="tspan42">DT</tspan>(q,e)</text>
+  <!-- score meter -->
+  <path
+     d="m 982.72516,283.5132 a 66.00002,66.00002 0 0 1 132.00004,0"
+     fill="none"
+     stroke="#333333"
+     stroke-width="2.1"
+     id="path43" />
+  <line
+     x1="1048.7252"
+     y1="283.51321"
+     x2="1088.7252"
+     y2="244.51321"
+     stroke="#333333"
+     stroke-width="3.2"
+     id="line43" />
+  <circle
+     cx="1048.7252"
+     cy="283.51321"
+     r="6"
+     fill="#333333"
+     id="circle43" />
+  <line
+     x1="991.72516"
+     y1="259.51321"
+     x2="1000.7252"
+     y2="264.51321"
+     class="thin"
+     id="line44" />
+  <line
+     x1="1011.7252"
+     y1="235.51321"
+     x2="1017.7252"
+     y2="244.51321"
+     class="thin"
+     id="line45" />
+  <line
+     x1="1048.7252"
+     y1="217.51321"
+     x2="1048.7252"
+     y2="229.51321"
+     class="thin"
+     id="line46" />
+  <line
+     x1="1085.7252"
+     y1="235.51321"
+     x2="1079.7252"
+     y2="244.51321"
+     class="thin"
+     id="line47" />
+  <line
+     x1="1105.7252"
+     y1="259.51321"
+     x2="1096.7252"
+     y2="264.51321"
+     class="thin"
+     id="line48" />
+  <text
+     x="1046.1492"
+     y="332.38306"
+     text-anchor="middle"
+     class="italic"
+     id="text48"><tspan
+       sodipodi:role="line"
+       id="tspan96"
+       x="1046.1492"
+       y="332.38306">Weighted sum</tspan><tspan
+       sodipodi:role="line"
+       id="tspan97"
+       x="1046.1492"
+       y="354.88306">over property groups</tspan></text>
+  <!-- Box 5 -->
+  <rect
+     x="1.0207664"
+     y="463.24423"
+     rx="13.415455"
+     ry="13.732828"
+     width="261.45181"
+     height="263.02979"
+     class="inputBox"
+     id="rect48" />
+  <circle
+     cx="35.427799"
+     cy="497.01013"
+     r="19"
+     fill="#ffffff"
+     stroke="#4a4a4a"
+     stroke-width="1.7"
+     id="circle48" />
+  <text
+     x="35.427799"
+     y="504.01013"
+     text-anchor="middle"
+     class="step"
+     id="text49">5</text>
+  <text
+     x="151.55826"
+     y="503.8797"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text50">Observed pairwise</text>
+  <text
+     x="143.83003"
+     y="531.8797"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text51">preferences e⁺ ≻ e⁻</text>
+  <!-- persons -->
+  <circle
+     cx="56.401272"
+     cy="582.21375"
+     r="10"
+     fill="#555555"
+     id="circle51" />
+  <path
+     d="m 41.401284,616.21372 q 15.000002,-28 30,0 v 12 h -30 z"
+     fill="#555555"
+     id="path51" />
+  <circle
+     cx="206.40129"
+     cy="582.21375"
+     r="10"
+     fill="#555555"
+     id="circle52" />
+  <path
+     d="m 191.40128,616.21372 q 15,-28 30,0 v 12 h -30 z"
+     fill="#555555"
+     id="path52" />
+  <text
+     x="131.40129"
+     y="613.21375"
+     text-anchor="middle"
+     class="title"
+     id="text52">≻</text>
+  <text
+     x="56.401272"
+     y="655.21375"
+     text-anchor="middle"
+     class="math"
+     id="text53">e⁺</text>
+  <text
+     x="206.40129"
+     y="655.21375"
+     text-anchor="middle"
+     class="math"
+     id="text54">e⁻</text>
+  <text
+     x="131.24913"
+     y="712.8443"
+     text-anchor="middle"
+     class="italic"
+     id="text55">Implicit feedback</text>
+  <!-- Box 6 -->
+  <rect
+     x="934.83325"
+     y="467.00409"
+     rx="15.72368"
+     ry="14.321618"
+     width="236.68573"
+     height="263.22021"
+     class="learnBox"
+     id="rect55" />
+  <circle
+     cx="960.16187"
+     cy="499.65765"
+     r="19"
+     fill="#ffffff"
+     stroke="#c96b22"
+     stroke-width="1.7"
+     id="circle55" />
+  <text
+     x="960.16187"
+     y="506.65765"
+     text-anchor="middle"
+     class="step"
+     id="text56">6</text>
+  <text
+     x="1071.2653"
+     y="497.94025"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text57">Group-regularized</text>
+  <text
+     x="1071.2653"
+     y="525.94025"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text58">pairwise learning</text>
+  <!-- plot -->
+  <line
+     x1="950.11847"
+     y1="637.27167"
+     x2="950.11847"
+     y2="564.27167"
+     class="thin"
+     id="line58" />
+  <line
+     x1="949.68915"
+     y1="637.22827"
+     x2="1050.6892"
+     y2="637.22827"
+     class="thin"
+     id="line59" />
+  <circle
+     cx="969.71637"
+     cy="609.93213"
+     r="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.3"
+     id="circle59" />
+  <circle
+     cx="990.60052"
+     cy="596.38751"
+     r="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.3"
+     id="circle60" />
+  <circle
+     cx="1007.1185"
+     cy="620.27167"
+     r="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.3"
+     id="circle61" />
+  <circle
+     cx="1023.1185"
+     cy="593.27167"
+     r="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.3"
+     id="circle62" />
+  <circle
+     cx="1040.2797"
+     cy="580.82556"
+     r="4"
+     fill="#ffffff"
+     stroke="#333333"
+     stroke-width="1.3"
+     id="circle63" />
+  <line
+     x1="961.11847"
+     y1="625.27167"
+     x2="1042.1185"
+     y2="569.27167"
+     stroke="#333333"
+     stroke-width="1.8"
+     id="line63" />
+  <text
+     x="1110.1185"
+     y="609.27167"
+     text-anchor="middle"
+     class="math"
+     id="text63">+ Ω<tspan
+   baseline-shift="sub"
+   font-size="15px"
+   id="tspan63">group</tspan>(θᵤ)</text>
+  <text
+     x="1052.2435"
+     y="691.59802"
+     text-anchor="middle"
+     class="italic"
+     id="text64"><tspan
+       sodipodi:role="line"
+       id="tspan100"
+       x="1052.2435"
+       y="691.59802">Learn coefficients θᵤ</tspan><tspan
+       sodipodi:role="line"
+       id="tspan101"
+       x="1052.2435"
+       y="714.09802">with group regularization</tspan></text>
+  <!-- Box 7 -->
+  <rect
+     x="1267.2196"
+     y="90.360733"
+     rx="13.992925"
+     ry="15.628016"
+     width="244.87619"
+     height="279.07172"
+     class="outBox"
+     id="rect64" />
+  <circle
+     cx="1299.1577"
+     cy="126.29883"
+     r="19"
+     fill="#ffffff"
+     stroke="#4e7c39"
+     stroke-width="1.7"
+     id="circle64" />
+  <text
+     x="1299.1577"
+     y="133.29883"
+     text-anchor="middle"
+     class="step"
+     id="text65">7</text>
+  <text
+     x="1391.1577"
+     y="127.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text66">Ranked RDF</text>
+  <text
+     x="1391.1577"
+     y="156.29883"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text67">entities</text>
+  <!-- ranking bars -->
+  <line
+     x1="1312.1577"
+     y1="280.29883"
+     x2="1479.1577"
+     y2="280.29883"
+     class="thin"
+     id="line67" />
+  <rect
+     x="1327.1577"
+     y="194.29883"
+     width="18"
+     height="86"
+     fill="#e6e6e6"
+     stroke="#333333"
+     id="rect67" />
+  <rect
+     x="1360.1577"
+     y="212.29883"
+     width="18"
+     height="68"
+     fill="#e6e6e6"
+     stroke="#333333"
+     id="rect68" />
+  <rect
+     x="1393.1577"
+     y="230.29883"
+     width="18"
+     height="50"
+     fill="#e6e6e6"
+     stroke="#333333"
+     id="rect69" />
+  <rect
+     x="1426.1577"
+     y="246.29883"
+     width="18"
+     height="34"
+     fill="#e6e6e6"
+     stroke="#333333"
+     id="rect70" />
+  <text
+     x="1336.1577"
+     y="308.29883"
+     text-anchor="middle"
+     class="small"
+     id="text70">1</text>
+  <text
+     x="1369.1577"
+     y="308.29883"
+     text-anchor="middle"
+     class="small"
+     id="text71">2</text>
+  <text
+     x="1402.1577"
+     y="308.29883"
+     text-anchor="middle"
+     class="small"
+     id="text72">3</text>
+  <text
+     x="1465.1577"
+     y="305.29883"
+     text-anchor="middle"
+     class="small"
+     id="text73">… n</text>
+  <text
+     x="1394.4512"
+     y="350.83151"
+     text-anchor="middle"
+     class="italic"
+     id="text74">Descending by U<tspan
+   baseline-shift="sub"
+   font-size="13px"
+   id="tspan73">DT</tspan>(q,e)</text>
+  <!-- Box 8 -->
+  <rect
+     x="1266.2991"
+     y="467.27682"
+     rx="14"
+     ry="14"
+     width="245"
+     height="265"
+     class="outBox"
+     id="rect74" />
+  <circle
+     cx="1298.2991"
+     cy="503.27679"
+     r="19"
+     fill="#ffffff"
+     stroke="#4e7c39"
+     stroke-width="1.7"
+     id="circle74" />
+  <text
+     x="1298.2991"
+     y="510.27679"
+     text-anchor="middle"
+     class="step"
+     id="text75">8</text>
+  <text
+     x="1396.371"
+     y="503.27679"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text76">Exact property</text>
+  <text
+     x="1400.014"
+     y="528.84802"
+     text-anchor="middle"
+     class="boxTitle"
+     id="text77">contributions Cₚ</text>
+  <!-- contribution bars -->
+  <rect
+     x="1311.7229"
+     y="547.22253"
+     width="38"
+     height="18"
+     fill="#dcedc8"
+     stroke="#4e7c39"
+     id="rect77" />
+  <text
+     x="1365.7229"
+     y="562.22253"
+     class="boxText"
+     id="text78">+</text>
+  <rect
+     x="1331.7229"
+     y="583.22253"
+     width="38"
+     height="18"
+     fill="#eaf4d7"
+     stroke="#4e7c39"
+     id="rect78" />
+  <text
+     x="1385.7229"
+     y="598.22253"
+     class="boxText"
+     id="text79">+</text>
+  <rect
+     x="1351.7229"
+     y="619.22253"
+     width="38"
+     height="18"
+     fill="#f7c7c7"
+     stroke="#9f3e3e"
+     id="rect79" />
+  <text
+     x="1406.7229"
+     y="634.22253"
+     class="boxText"
+     id="text80">−</text>
+  <rect
+     x="1371.7229"
+     y="655.22253"
+     width="38"
+     height="18"
+     fill="#e9e9e9"
+     stroke="#555555"
+     id="rect80" />
+  <text
+     x="1425.7229"
+     y="670.22253"
+     class="boxText"
+     id="text81">+</text>
+  <text
+     x="1390.0165"
+     y="698.90741"
+     text-anchor="middle"
+     class="italic"
+     id="text82"><tspan
+       sodipodi:role="line"
+       id="tspan102"
+       x="1390.0165"
+       y="698.90741">Additive decomposition</tspan><tspan
+       sodipodi:role="line"
+       id="tspan103"
+       x="1390.0165"
+       y="721.40741">by property</tspan></text>
+  <!-- Flows -->
+  <path
+     d="m 257.15766,227.29883 h 48"
+     class="arrow"
+     id="path82" />
+  <path
+     d="m 570.15766,227.29883 h 43"
+     class="arrow"
+     id="path83" />
+  <path
+     d="m 895.56782,229.12039 h 40.40932"
+     class="arrow"
+     id="path84"
+     style="stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="M 262.85459,592.74077 H 931.5547"
+     class="arrow"
+     id="path85"
+     style="stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="M 1060.8653,465.99519 V 371.48815"
+     class="arrow"
+     id="path86"
+     sodipodi:nodetypes="cc"
+     style="stroke-width:2.6;stroke-dasharray:none" />
+  <path
+     d="m 1158.7622,226.57833 h 104.5903"
+     class="arrow"
+     id="path87"
+     style="stroke-width:2.6;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 1208.2059,226.07172 -0.8607,367.5948 h 55.2463"
+     class="arrow"
+     id="path88"
+     style="stroke-width:2.79279;stroke-dasharray:none"
+     sodipodi:nodetypes="ccc" />
+  <!-- conceptual learning connector from features to fitting -->
+  <!-- Legend -->
+  <!-- Footer formula -->
+</svg>
