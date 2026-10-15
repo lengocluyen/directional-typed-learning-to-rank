@@ -28,16 +28,9 @@ choice sets, and generated noisy comparisons over the bundled ADEME catalogue.
 Matched symmetric, direct, spline and CatBoost controls assess the contribution
 of the representation. Generated preferences are controlled mechanism tests.
 
-Training, development selection, probability calibration and test evaluation
-use separate data roles. Any session adaptation uses only that session's
-reserved support choices. The [experiment protocol](study/EXPERIMENT_PROTOCOL.md)
-and [reproducibility guide](docs/REPRODUCIBILITY.md) give the full design and
-interpretation limits.
-
 ## Install and check
 
-Use Python **3.12** and [uv](https://docs.astral.sh/uv/). A GPU is not required.
-Run these commands from this folder in a Linux shell or Windows PowerShell;
+Use Python **3.12** and [uv](https://docs.astral.sh/uv/). Run these commands from this folder in a Linux shell or Windows PowerShell;
 the same commands work in both:
 
 ```sh
@@ -68,59 +61,5 @@ Read [data sources and terms](data/README.md). Acquisition is an explicit opt-in
 
 ```sh
 uv run --frozen --extra dev python scripts/acquire_data.py --dataset all --download
-uv run --frozen --extra dev python -u scripts/run_experiment.py run --config configs/smoke.yaml --output runs/all-smoke --workers 2
-uv run --frozen --extra dev python -u scripts/run_experiment.py run --config configs/pilot.yaml --output runs/pilot --workers 4
 uv run --frozen --extra dev python -u scripts/run_experiment.py run --config configs/full.yaml --output runs/full --workers 4
 ```
-
-The full profile contains **101 tasks** without an external observed-data bundle
-and is much more expensive than smoke. `configs/ablation-smoke.yaml` provides a
-small repeated check across all completion/clipping policies; run it with the
-same command and a new output such as `runs/ablation-smoke`. The four profiles
-are separate studies, with their settings declared in the configuration files.
-The runner itself never downloads data.
-
-## Plan, resume and inspect
-
-`plan` verifies inputs and saves a run manifest without fitting. Use a separate
-directory for a preview:
-
-```sh
-uv run --frozen --extra dev python scripts/run_experiment.py plan --config configs/full.yaml --output runs/full-plan
-```
-
-To execute that exact planned run, use `run` with the same configuration and
-output plus `--resume`. To resume an interrupted run:
-
-```sh
-uv run --frozen --extra dev python -u scripts/run_experiment.py run --config configs/full.yaml --output runs/full --workers 4 --resume
-uv run --frozen --extra dev python scripts/run_experiment.py summarize --output runs/full
-uv run --frozen --extra dev python scripts/run_experiment.py export --output runs/full
-```
-
-Resume requires unchanged code, configuration, data and runtime; a changed
-identity requires a new output directory. `summarize` can inspect a partial run;
-`export` requires completion. Reports appear under `reports/`: `REPORT.md`,
-numerical CSVs, `fits.json` and `diagnostics.json`. Full task records and
-predictions remain under `tasks/`. Export writes a compact archive and checksum
-under `exports/`, omitting the full task files. Reports and exports can contain
-session-level model information and locally acquired provenance; review them
-before sharing.
-
-The active implementation is `src/dtltr_vehicle/experiments/`, importable as
-`dtltr_vehicle.experiments`. See [reproducibility](docs/REPRODUCIBILITY.md) and
-the [frozen numerical reference](reference_results/README.md) for provenance
-and interpretation.
-
-## Package the release
-
-```sh
-uv run --frozen --extra dev python scripts/package_release.py --output ../dtltr-code.zip
-```
-
-The packager verifies `RELEASE_MANIFEST.json` and includes only its named files,
-the manifest and `SHA256SUMS`. Virtual environments, acquired archives, runs and
-caches are excluded. An existing ZIP is not overwritten.
-
-See the [software licence](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md)
-and `CITATION.cff`. Add actual deposit metadata when the artifact is published.
